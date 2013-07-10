@@ -1,0 +1,28 @@
+//
+// Minotaur core variables
+//
+
+@base-font-size: 16px;
+@base-line-height: 1.5em;
+
+@ui-well-color: darken(white, 5%);
+
+// A couple breakpoints
+@breakpoint-large: 1200px;
+@breakpoint-mid: 960px;
+@breakpoint-small: 600px;
+
+// The point at which the layout changes from 4 columns to 8 columns
+@eight-columns: @breakpoint-small - 1px;
+@eight-column-fluid: true;
+
+// The point at which the layout changes from 8 columns to 12 columns
+@twelve-columns: @breakpoint-mid - 1px;
+@twelve-column-fluid: false;
+
+@column-padding: 0.5rem;
+
+@four-column-padding: @column-padding;
+@eight-column-padding: @column-padding * 1.5;
+@twelve-column-padding: @column-padding * 2;
+

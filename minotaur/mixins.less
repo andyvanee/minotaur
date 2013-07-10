@@ -1,0 +1,27 @@
+.twelve-columns (@media-width) when (@media-width > 0px) {
+  @media (min-width: @media-width) {
+    @import 'twelve';
+  }
+}
+
+.eight-columns (@media-width) when (@media-width > 0px) {
+  @media (min-width: @media-width) {
+    @import 'eight';
+  }
+}
+
+.breakpoint(@fluid, @max-width, @min-width) when (@fluid = false) {
+  @media (max-width: @max-width) {
+    .container { max-width: @min-width; }
+  }
+}
+
+.breakpoint(@fluid, @max-width, @min-width) when (@fluid = true) {
+  @media (max-width: @max-width) {
+    .container { max-width: 100%; }
+  }
+}
+
+.well-padding(@padding) {
+  padding: @padding * 0.678 @padding;
+}

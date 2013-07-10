@@ -1,0 +1,43 @@
+@import 'normalize';
+@import 'mixins';
+
+div, p, ol, ul {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  margin: 0;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row { clear: both; }
+
+.clear { min-height: 1px; width: 100%; clear: both; }
+
+[class*='span-'] {
+  width: 100%;
+  float: left;
+
+  &.right {
+    float: right;
+  }
+}
+
+@import 'four';
+
+.eight-columns(@eight-columns);
+
+.twelve-columns(@twelve-columns);
+
+.container { max-width: @breakpoint-large; }
+
+.breakpoint(@twelve-column-fluid, @breakpoint-large - 1px, @breakpoint-mid);
+
+.breakpoint(@eight-column-fluid, @breakpoint-mid - 1px, @breakpoint-small);
