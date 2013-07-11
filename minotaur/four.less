@@ -2,6 +2,12 @@
 
 [class*='span-'], .row {
   padding: 0 @padding;
+  min-height: 1px;
+  position: relative;
+}
+
+.row {
+  overflow: hidden;
 }
 
 .span-1 { width: 100% / 4 * 1; }

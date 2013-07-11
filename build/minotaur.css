@@ -55,7 +55,8 @@ html,body{font-size:16px;line-height:1.5em;margin:0;}
 .clear{min-height:1px;width:100%;clear:both;}
 [class*='span-']{width:100%;float:left;}[class*='span-'].right{float:right;}
 .well{padding:0.339rem 0.5rem;margin:0 0 0.5rem;background-color:#f2f2f2;border-radius:5px;border:1px solid #d9d9d9;}@media (min-width:599px){.well{padding:0.5085000000000001rem 0.75rem;}}@media (min-width:959px){.well{padding:0.678rem 1rem;}}.well.no-side-padding{padding-left:0;padding-right:0;}
-[class*='span-'],.row{padding:0 0.5rem;}
+[class*='span-'],.row{padding:0 0.5rem;min-height:1px;position:relative;}
+.row{overflow:hidden;}
 .span-1{width:25%;}
 .span-2{width:50%;}
 .span-3{width:75%;}
