@@ -4,19 +4,23 @@
   <title>Minotaur</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
   <div class="hero-box">
     <div class="container">
+
       <div class="row">
         <div class="span-12">
           <h1>Minotaur <span class="subheading">a minimalistic CSS framework</span></h1>
         </div>
         <div class="clear"></div>
       </div>
+
     </div>
   </div>
   <div class="container">
     <div class="row">
+
       <div class="span-12">
         <h2 id="what-it-is">What is it?</h2>
 
@@ -27,30 +31,31 @@
           Minotaur doesn't include a massive widget collection. It only provides a customizable grid, a clean approach to typography, and easy theming of core HTML elements.
         </p>
       </div>
+
     </div>
 
     <div class="row">
+
       <div class="span-12">
         <h2 id="usage">Usage</h2>
         <p>
-          Minotaur written using <a href="http://lesscss.org/">less.css</a>. It is modular, and meant to be overridden with your own custom variables. Your own less file should look something like the following:
+          Minotaur written using <a href="http://lesscss.org/">less.css</a>. Your own less file should look something like the following:
         </p>
         <pre>@import 'minotaur/variables';      // Minotaur grid system variables
-@import 'minotaur-ui/variables';   // Minotaur UI variables
 @import 'variables';               // your own variables to override the defaults
 @import 'minotaur/minotaur';       // Minotaur grid system
-@import 'minotaur-ui/minotaur-ui'; // Minotaur UI
 
 ... the rest of your styles ...</pre>
 
         <p>
-          See the <a href="#README">README</a> for more details on integrating it into your project.
+          See the <a href="https://github.com/Andyvanee/minotaur/blob/master/README.md">README</a> for more details on integrating it into your project.
         </p>
-
       </div>
+
     </div>
 
     <div class="row">
+
       <div class="span-12">
         <h2 id="grid">Grid</h2>
       </div>
@@ -71,8 +76,11 @@
           Also, the grid can be fluid or fixed-size between these breakpoints depending on the values set for the <code>@eight-column-fluid</code> and <code>@twelve-column-fluid</code> variables.
         </p>
       </div>
+
     </div>
+
     <div class="row">
+
       <div class="span-8">
         <div style="border: 2px solid #e1e8ea; border-radius: 4px; padding: 2em 4em;">
           <p>
@@ -86,41 +94,46 @@
           </p>
         </div>
       </div>
+
       <div class="span-4 mid-8">
         <h4>Responsive margins and paddings</h4>
         <p>Minotaur adjusts the padding between and around columns as screen real-estate shrinks. See the <code>@column-padding</code> variables in <code>minotaur/variables.less</code>.</p>
       </div>
+
     </div>
+
     <div class="row">
+
       <div class="span-12">
         <h3>Grid Demo</h3>
       </div>
+
       <div class="span-8 mid-5 right">
         <h4>Main Column</h4>
         <p>This is a demo of a couple of the features of the grid. This column has the following classes: <code>span-8 mid-5 right</code>. The large layout has 12 columns, and this takes up 8 of them. The mid-size layout has 8 columns, and this would take up all of them if not for the <code>.mid-5</code> class which causes it to use 5 columns. The small layout has only 4 columns, so <code>.span-8</code> is interpreted as being equivalent to <code>.span-4</code>. The <code>right</code> class indicates that this column should be floated to the right in multicolumn layouts, instead of left as it would by default.</p>
       </div>
+
       <div class="span-4 mid-3">
         <h4>Sidebar</h4>
         <p>This column comes after the Main Column content, but on multicolumn layouts it will appear on the left.</p>
       </div>
+
     </div>
 
     <div class="row">
+
       <div class="span-12">
         <h2 id="typography">Typography</h2>
       </div>
 
-      <div class="span-4 mid-8 large-3" style="margin-top: 1em;">
-        <p class="well">
-          Typography is part of minotaur-ui. If all you want is the grid system, feel free to leave out minotaur-ui.
-        </p>
-      </div>
-
-      <div class="span-9 mid-8">
+      <div class="span-4">
         <h3>Normalize-css</h3>
         <p>
           The starting point for typesetting in Minotaur is the excellent and ubiquitous <a href="http://necolas.github.io/normalize.css/">normalize.css</a>.
         </p>
+      </div>
+
+      <div class="span-8 mid-8">
         <h3>Embracing the Rem's</h3>
         <p>
           Typography in Minotaur uses rem's <small>(root em's)</small> quite liberally to set a consistent pace of line-heights and margins.
@@ -132,12 +145,16 @@
           Headings, on the other hand, use margins and line-heights measured in rem's. The <code>.heading()</code> mixin provided in <code>minotaur-ui/mixins.less</code> takes a font size in rem's and produces a heading with the given font-size, a line height rounded up to the nearest rem, and the margins specified by <code>@ui-margin-top</code> and <code>@ui-margin-bottom</code>.
         </p>
       </div>
+
     </div>
+
     <div class="row">
+
       <div class="span12">
         <h2>HTML Elements</h2>
         <p>Coming soon...</p>
       </div>
+
     </div>
   </div>
 </body>

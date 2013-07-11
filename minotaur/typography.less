@@ -23,3 +23,22 @@ small, .font-small {
   font-size: 0.9em;
   opacity: 0.9;
 }
+
+a {
+  color: @ui-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(@ui-link-color, 10);
+    text-decoration: underline;
+  }
+}
+
+ul {
+  padding-left: 2em;
+}
+
+ul.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}

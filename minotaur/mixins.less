@@ -25,3 +25,16 @@
 .well-padding(@padding) {
   padding: @padding * 0.678 @padding;
 }
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.heading(@font-size) {
+  font-size: @font-size;
+  margin-top: @ui-margin-top;
+  margin-bottom: @ui-margin-bottom;
+  line-height: ceil(@font-size);
+}
