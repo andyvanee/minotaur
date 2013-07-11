@@ -6,12 +6,11 @@ div, p, ol, ul {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-size: @base-font-size;
   line-height: @base-line-height;
   margin: 0;
 }
-
 
 .container {
   width: 100%;
@@ -29,6 +28,10 @@ body {
   &.right {
     float: right;
   }
+}
+
+.well {
+  .well(@ui-well-color);
 }
 
 @import 'four';

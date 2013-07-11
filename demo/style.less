@@ -11,21 +11,14 @@
   text-align: center;
 }
 
-
-.column-heading {
-  .well;
-}
-
 code, pre {
   font-size: 14em/16;
 }
 
 pre {
-  border-radius: @ui-border-radius;
-  padding: 1em;
+  .well(@ui-well-color);
   white-space: pre;
   overflow-x: scroll;
-  background-color: @ui-well-color;
 }
 
 code {
@@ -37,13 +30,4 @@ code {
   display: block;
   font-size: 0.4em;
   font-weight: normal;
-}
-
-.bordered {
-  border: 1px solid darken(@ui-bg, 10%);
-  border-radius: @ui-border-radius;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-right: -1px;
-  margin-top: -1px;
 }

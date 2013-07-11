@@ -38,3 +38,25 @@
   margin-bottom: @ui-margin-bottom;
   line-height: ceil(@font-size);
 }
+
+
+.well(@well-color){
+  .well-padding(@column-padding);
+  margin: 0 0 @padding;
+  background-color: @well-color;
+  border-radius: @ui-border-radius;
+  border: 1px solid darken(@well-color, 10%);
+
+  @media (min-width: @eight-columns)  {
+    .well-padding(@eight-column-padding);
+  }
+
+  @media (min-width: @twelve-columns) {
+    .well-padding(@twelve-column-padding);
+  }
+
+  &.no-side-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
