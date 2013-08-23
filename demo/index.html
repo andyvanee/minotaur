@@ -68,7 +68,7 @@
         Minotaur has 3 major breakpoints defining a 4, 8 and 12 column grid. A css class of <code>.span-4</code> is full width at the smallest sizes, half screen at tablet sizes and one-third width at desktop sizes. This can be customized by adding mid-* and large-* classes to override this behaviour.
       </p>
 
-      <div class="span-4 mid-8">
+      <div class="span-4 mid-8 large-4">
         <p>
           Column ordering can be adjusted by adding <code>.right</code> classes to any div that should appear on the right for multi-column layouts, but first in single-column layouts.
         </p>
@@ -95,7 +95,7 @@
         </div>
       </div>
 
-      <div class="span-4 mid-8">
+      <div class="span-4 mid-8 large-4">
         <h4>Responsive margins and paddings</h4>
         <p>Minotaur adjusts the padding between and around columns as screen real-estate shrinks. See the <code>@column-padding</code> variables in <code>minotaur/variables.less</code>.</p>
       </div>
@@ -108,14 +108,14 @@
         <h2 id="typography">Typography</h2>
       </div>
 
-      <div class="span-4">
+      <div class="span-4 mid-8 large-4">
         <h3>Normalize-css</h3>
         <p>
           The starting point for typesetting in Minotaur is the excellent and ubiquitous <a href="http://necolas.github.io/normalize.css/">normalize.css</a>.
         </p>
       </div>
 
-      <div class="span-8 mid-8">
+      <div class="span-8">
         <h3>Embracing the Rem's</h3>
         <p>
           Typography in Minotaur uses rem's <small>(root em's)</small> quite liberally to set a consistent pace of line-heights and margins.
@@ -132,12 +132,34 @@
 
     <div class="row">
 
-      <div class="span12">
+      <div class="span-12">
         <h2>HTML Elements</h2>
         <p>Coming soon...</p>
       </div>
 
     </div>
+
+    <div class="row">
+      <h2 class="span-12">Forms <small>(in progress)</small></h2>
+
+      <p class="span-4 mid-3 right well">Not many clever ideas here yet. It seems like form markup is always awful, and there's no real way around that.</p>
+
+      <div class="span-8 mid-5">
+        <form>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text">
+          <br>
+          <label for="content">Content</label>
+          <textarea id="content" name="content"></textarea>
+          <br>
+          <label for="submit">&nbsp;</label>
+          <input type="submit" value="Submit">
+        </form>
+
+      </div>
+    </div>
   </div>
+  <div class="hero-box"><p>the end</p></div>
+
 </body>
 </html>
