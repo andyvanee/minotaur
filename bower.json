@@ -5,6 +5,8 @@
   "license": "MIT",
   "main": "less/minotaur.less",
   "dependencies": {
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "lesshat": "~2.0.15",
+    "zepto": "~1.1.3"
   }
 }

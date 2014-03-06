@@ -4,162 +4,94 @@
   <title>Minotaur</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-  <div class="hero-box">
+  <div class="hero-box header">
     <div class="container">
-
       <div class="row">
-        <div class="span-12">
-          <h1>Minotaur <span class="subheading">a minimalistic CSS framework</span></h1>
+        <div class="col-sm-12">
+          <h1>Minotaur <br><small>a minimalistic CSS framework</small></h1>
         </div>
         <div class="clear"></div>
       </div>
-
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-
-      <div class="span-12">
-        <h2 id="what-it-is">What is it?</h2>
-
-        <p>
-          Minotaur is a small framework built on top of <a href="http://necolas.github.io/normalize.css/">normalize.css</a> with the goal to make it <a href="#grid">responsive</a> and <a href="#typography">customizable</a>.
-        </p>
-        <p>
-          Minotaur doesn't include a massive widget collection. It only provides a customizable grid, a clean approach to typography, and easy theming of core HTML elements.
-        </p>
-      </div>
-
+  <div class="demo-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#errata">Errata</a></li>
+      </ul>
     </div>
-
-    <div class="row">
-
-      <div class="span-12">
-        <h2 id="usage">Usage</h2>
-        <p>
-          Minotaur written using <a href="http://lesscss.org/">less.css</a>. Your own less file should look something like the following:
-        </p>
-        <pre>@import 'minotaur/variables';      // Minotaur grid system variables
-@import 'variables';               // your own variables to override the defaults
-@import 'minotaur/minotaur';       // Minotaur grid system
-
-... the rest of your styles ...</pre>
-
-        <p>
-          See the <a href="https://github.com/Andyvanee/minotaur/blob/master/README.md">README</a> for more details on integrating it into your project.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="span-12">
-        <h2 id="grid">Grid</h2>
-      </div>
-
-      <p class="span-4">
-        The Minotaur grid avoids many of the magical psuedo-classes and negative margins that are so prevalant in frameworks today. It is symmetrical, nestable and follows the screen-dimensions in an intuitive way.
-      </p>
-
-      <p class="span-4">
-        Minotaur has 3 major breakpoints defining a 4, 8 and 12 column grid. A css class of <code>.span-4</code> is full width at the smallest sizes, half screen at tablet sizes and one-third width at desktop sizes. This can be customized by adding mid-* and large-* classes to override this behaviour.
-      </p>
-
-      <div class="span-4 mid-8 large-4">
-        <p>
-          Column ordering can be adjusted by adding <code>.right</code> classes to any div that should appear on the right for multi-column layouts, but first in single-column layouts.
-        </p>
-        <p>
-          Also, the grid can be fluid or fixed-size between these breakpoints depending on the values set for the <code>@eight-column-fluid</code> and <code>@twelve-column-fluid</code> variables.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="span-8">
-        <div class="well">
+  </div>
+  <div class="pages">
+    <div class="container">
+      <div id="about" class="row page active">
+        <div class="col-sm-4">
+          <h3 id="what-it-is">What is it?</h3>
           <p>
-            <strong>How does that work?</strong>
+            Minotaur began as a minimalistic CSS framework. Since Bootstrap 3 came
+            along and implemented the majority of these ideas, it's been converted
+            to leverage Bootstrap.
           </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Starting at &lt; 20kb!!</h3>
           <p>
-            Minotaur uses padding, rem's <small>(root em's)</small> and <code>box-sizing: border-box</code> to perform it's grid magic. The row is padded with half the gutter width and the columns are padded with the other half.
+            Bootstrap alone clocks in at around 120kb. Minotaur only includes the
+            core of Bootstrap, along with normalize.css and the handy mixins from
+            LessHat. This gives you a lean and powerful starting point to
+            implement your own sites.
           </p>
+        </div>
+        <div class="col-sm-4">
+          <h3 id="usage">Usage</h3>
           <p>
-            This makes it much easier to add borders &amp; backgrounds or customize the padding of a column without getting into any high-order math.
+            Start by importing <code>minotaur.less</code>. Take a look there to
+            see what's included. If you need other parts of bootstrap, just import
+            what you need.
           </p>
         </div>
       </div>
 
-      <div class="span-4 mid-8 large-4">
-        <h4>Responsive margins and paddings</h4>
-        <p>Minotaur adjusts the padding between and around columns as screen real-estate shrinks. See the <code>@column-padding</code> variables in <code>minotaur/variables.less</code>.</p>
+      <div id="examples" class="page row">
+        <h2 class="col-sm-12">Forms <small>(in progress)</small></h2>
+        <div class="col-sm-6">
+          <p>
+            Not many clever ideas here yet. It seems like form markup is always awful, and there's no real way around that.
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <form role="form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" name="name" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="content">Content</label>
+              <textarea class="form-control" id="content" name="content"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="submit">&nbsp;</label>
+              <input class="form-control btn btn-primary" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
       </div>
 
-    </div>
-
-    <div class="row">
-
-      <div class="span-12">
-        <h2 id="typography">Typography</h2>
-      </div>
-
-      <div class="span-4 mid-8 large-4">
-        <h3>Normalize-css</h3>
-        <p>
-          The starting point for typesetting in Minotaur is the excellent and ubiquitous <a href="http://necolas.github.io/normalize.css/">normalize.css</a>.
-        </p>
-      </div>
-
-      <div class="span-8">
-        <h3>Embracing the Rem's</h3>
-        <p>
-          Typography in Minotaur uses rem's <small>(root em's)</small> quite liberally to set a consistent pace of line-heights and margins.
-        </p>
-        <p>
-          The core line-height <code>@ui-line-height</code> is set in em's (<code>1.75em</code> by default) so that it matches whatever content it is applied to.
-        </p>
-        <p>
-          Headings, on the other hand, use margins and line-heights measured in rem's. The <code>.heading()</code> mixin provided in <code>minotaur-ui/mixins.less</code> takes a font size in rem's and produces a heading with the given font-size, a line height rounded up to the nearest rem, and the margins specified by <code>@ui-margin-top</code> and <code>@ui-margin-bottom</code>.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="row">
-
-      <div class="span-12">
-        <h2>HTML Elements</h2>
-        <p>Coming soon...</p>
-      </div>
-
-    </div>
-
-    <div class="row">
-      <h2 class="span-12">Forms <small>(in progress)</small></h2>
-
-      <p class="span-4 mid-3 right well">Not many clever ideas here yet. It seems like form markup is always awful, and there's no real way around that.</p>
-
-      <div class="span-8 mid-5">
-        <form>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text">
-          <br>
-          <label for="content">Content</label>
-          <textarea id="content" name="content"></textarea>
-          <br>
-          <label for="submit">&nbsp;</label>
-          <input type="submit" value="Submit">
-        </form>
-
+      <div id="errata" class="page row">
+        <div class="col-sm-12">
+          <p>mumble, mumble</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="hero-box"><p>the end</p></div>
-
+  <div class="footer"><div class="container">
+    <p>minotaur.css</p>
+  </div></div>
+  <script src="zepto.min.js"></script>
+  <script src="demo.js"></script>
 </body>
 </html>

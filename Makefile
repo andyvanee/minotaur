@@ -1,20 +1,17 @@
-#!/bin/bash
+LESSC=./node_modules/.bin/lessc
 
-DEMOCSS = demo/style.css
-DEMOLESS = $(wildcard demo/*.less)
-BUILD = build/minotaur.css
-MINOTAUR = $(wildcard minotaur/*.less)
+MN=$(wildcard less/*.less)
+BS=$(wildcard bower_components/bootstrap/less/*.less)
+LESSHAT=$(wildcard bower_components/lesshat/build/*.less)
+FA=$(wildcard bower_components/font-awesome/less/*.less)
 
-default: thedemo $(BUILD) variables.less
+DEPS=$(MN) $(BS) $(LESSHAT) $(FA)
 
-variables.less: minotaur/variables.less
-	cat $^ > $@
+.PHONY: demo
+demo: demo/style.css demo/zepto.min.js
 
-thedemo: $(DEMOCSS)
+demo/style.css: $(DEPS) demo/demo.less
+	$(LESSC) --compress --include-path=bower_components demo/demo.less $@
 
-$(DEMOCSS): $(DEMOLESS) $(MINOTAUR)
-	lessc --compress demo/style.less > $@
-
-$(BUILD): $(MINOTAUR)
-	mkdir -p build
-	lessc --compress minotaur/build.less > $@
+demo/zepto.min.js: bower_components/zepto/zepto.min.js
+	cp $? $@

@@ -25,7 +25,7 @@
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fcfaf5;
+@body-bg:               #fffdfb;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -43,7 +43,7 @@
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+@font-family-base:        @font-family-serif;
 
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -57,7 +57,7 @@
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.65; // 20/14
+@line-height-base:        1.75; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
@@ -291,7 +291,7 @@
 //## Define your custom responsive grid.
 
 //** Number of columns in the grid.
-@grid-columns:              8;
+@grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:         60px;
 // Navbar collapse
@@ -717,7 +717,7 @@
 //
 //##
 
-@well-bg:                     #f5f5f5;
+@well-bg:                     darken(@body-bg, 5%);
 @well-border:                 darken(@well-bg, 7%);
 
 
@@ -787,12 +787,12 @@
 //##
 
 @code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-bg:                     darken(@body-bg, 5%);
 
 @kbd-color:                   #fff;
 @kbd-bg:                      #333;
 
-@pre-bg:                      #f5f5f5;
+@pre-bg:                      darken(@body-bg, 5%);
 @pre-color:                   @gray-dark;
 @pre-border-color:            #ccc;
 @pre-scrollable-max-height:   340px;
