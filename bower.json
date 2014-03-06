@@ -1,0 +1,10 @@
+{
+  "name": "minotaur",
+  "description": "A minimalistic CSS framework",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "less/minotaur.less",
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
