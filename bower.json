@@ -1,12 +1,13 @@
 {
   "name": "minotaur",
   "description": "A minimalistic CSS framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "less/minotaur.less",
   "dependencies": {
     "bootstrap": "~3.1.1",
-    "lesshat": "~2.0.15",
-    "zepto": "~1.1.3"
-  }
+    "lesshat": "~2.0.15"
+  },
+  "homepage": "http://andyvanee.github.io/minotaur/",
+  "authors": ["Andy VanEe"]
 }
