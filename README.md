@@ -1,5 +1,7 @@
 # Minotaur
 
+**Repository Archived** - git history is still available, but I'm deleting old code.
+
 a minimalistic, bootstrap-compatible, CSS framework
 
 See <http://andyvanee.github.io/minotaur/> for demo and usage. **currently broken**
